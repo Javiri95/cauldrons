@@ -1,3 +1,6 @@
+
+
+
 const data = {
     "cauldrons": {
         "winter_seasson": [
@@ -1012,15 +1015,53 @@ const data = {
 }
 
 
+
+
+let arrayData = [data];
+ 
+
+//console.log(arrayData[0].cauldrons.summer_seasson[0].name);
+//console.log(arrayData[0].cauldrons.summer_seasson.length);
+
+
+
 // 1.- Mostrar la cantidad total de cauldrons
 
-console.log(cauldrons.id.length);
+let totalCauldrons = arrayData[0].cauldrons.winter_seasson.length + arrayData[0].cauldrons.summer_seasson.length + arrayData[0].cauldrons.spring_seasson.length + arrayData[0].cauldrons.autumn_seasson.length;
+
+console.log("Total cauldrons : " , totalCauldrons);
+console.log("");
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
-
+console.log("Winter cauldrons :",arrayData[0].cauldrons.winter_seasson.length);
+console.log("Summer cauldrons :",arrayData[0].cauldrons.summer_seasson.length);
+console.log("Spring cauldrons :",arrayData[0].cauldrons.spring_seasson.length);
+console.log("Autumn cauldrons :",arrayData[0].cauldrons.autumn_seasson.length);
+console.log("");
 // 3.- Mostrar la cantidad de Cauldrons rotos agrupados por temporada
 
+
+for (let season in arrayData[0].cauldrons)
+ {
+    let count = 0;
+    for (let i = 0; i < arrayData[0].cauldrons[season].length; i++)
+     {
+      if (arrayData[0].cauldrons[season][i].damaged)
+       {
+        count++;
+       }
+     }
+    console.log(`Cantidad de cauldrons dañados en ${season}: ${count}`);
+  }
+
+console.log("");
+
+ 
+
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
+
+
+
 
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
 
@@ -1033,4 +1074,90 @@ console.log(cauldrons.id.length);
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  const dataArray = JSON.parse(dataJson);
+
+//  console.log(dataArray);
+
+// console.log(data.id.length);
+
+// const dataJson = JSON.stringify(data);
+
+// console.log(dataJson);
+
+// console.log(data);
+
+//  function createCauldrons(data)
+//  {
+//      let cauldron;
+ 
+//      //Reseteamos las cartas
+//      globals.cauldrons = [];
+
+
+//       dataJson
+    
+//      for (let i= 0; i < globals.cauldrons.length; ++i)
+//      {
+//          cauldron = new Cauldron(
+             
+            
+             
+//             globals.cauldrons[i].id,
+//             globals.cauldrons[i].name,
+//             globals.cauldrons[i].magic_description,
+//             globals.cauldrons[i].type,
+//             globals.cauldrons[i].damaged,
+//             globals.cauldrons[i].color
+
+
+//          )
+        
+//          globals.cauldrons.push(cauldron);
+//      }
+ 
+   
+//  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
