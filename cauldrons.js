@@ -1271,7 +1271,23 @@ console.log("");
 console.log("10.");
 
 
+let colors = [];
 
+
+for (let season in data.cauldrons)
+{
+  
+  data.cauldrons[season].forEach(cauldron => {
+    
+    if (!colors.includes(cauldron.color))
+     {
+      colors.push(cauldron.color);
+     }
+
+  });
+}
+
+console.log("Los diferentes colores de los cauldrons son:", colors);
 
 
 
